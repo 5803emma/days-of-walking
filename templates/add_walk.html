@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-10 text-dark welcome-text">
+            <h1><strong>Have you found a walk you want to share?</strong></h1>
+            <h2><strong>Add your walk here!</strong></h2>
+        </div>
+    </div>
+    <div class="row row-form justify-content-center">
+        <div class="col-12 col-md-5">
+            <!-- Form fields -->
+            <form action="{{url_for('insert_walk')}}" method="POST" class="form_font">
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_name">Walk Name </label>
+                    <textarea class="form-control" id="walk_name" name="walk_name" rows="1" required></textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_difficulty">Difficulty </label>
+                    <select class="form-control" id="status" name="status">
+                        <option value="" disabled selected>Select Type</option>
+                        <option>Easy</option>
+                        <option>Moderate</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_location">Location of Walk</label>
+                    <textarea class="form-control" id="walk_location" name="walk_location" rows="5" required></textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_length">Length of Walk</label>
+                    <textarea class="form-control" id="walk_location" name="walk_location" rows="5" required></textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_terrain">Terrain </label>
+                    <textarea class="form-control" id="walk_url" name="walk_url" rows="3" required></textarea>
+                </div>
+                <!-- Send button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

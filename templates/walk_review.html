@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center">
+        <div class="col-10 text-dark welcome-text">
+            <h1>Have you walked these routes?</h1><br><h2>Why not leave a review here!</h2>
+        </div>
+    </div>
+    <div class="row row-form justify-content-center">
+        <!-- Review Form -->
+        <div class="col-12 col-md-5">
+            <form action="{{url_for('insert_review')}}" method="POST" class="form_font">
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_name">Walk Name: (Must be in database)</label>
+                    <select class="form-control" id="walk_name" name="walk_name">
+                        <option value="" disabled selected>Select Walk</option>
+                        {% for walk in walks %}
+                        <option required>{{walk.walk_name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+               
+                <div class="form-group font-weight-bolder">
+                    <label for="date_of_review">Review Date: </label>
+                    <input type="date" class="form-control" id="date_of_review" name="date_of_review" rows="1" required>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="review_by">Reviewed by: </label>
+                    <textarea class="form-control" id="review_by" name="review_by" rows="1" required></textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="review">User Review: </label>
+                    <textarea class="form-control" id="review" name="review" rows="10" required></textarea>
+                </div>
+                <!-- Send button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

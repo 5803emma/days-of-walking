@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-10 text-dark welcome-text">
+            <h1><strong>Update This Walk</strong></h1>
+        </div>
+    </div>
+    <div class="row row-form justify-content-center">
+        <div class="col-12 col-md-5">
+            <!-- Form fields here -->
+            <form action="{{url_for('update_walk', walk_id=walk._id) }}" method="POST" class="form_font">
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_name">Name of Walk: </label>
+                    <textarea class="form-control" id="walk_name" name="walk_name" rows="1" required>{{walk.walk_name}}</textarea>
+                </div>
+                 <div class="form-group font-weight-bolder">
+                    <label for="walk_location">Location of Walk: </label>
+                    <textarea class="form-control" id="walk_location" name="walk_location" rows="1" required>{{walk.walk_location}}</textarea>
+                </div>
+                 <div class="form-group font-weight-bolder">
+                    <label for="walk_length">Length of Walk: </label>
+                    <textarea class="form-control" id="walk_length" name="walk_length" rows="1" required>{{walk.walk_length}}</textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_terrain">Terrain</label>
+                    <textarea class="form-control" id="walk_terrain" name="walk_terrain" rows="2" required>{{walk.walk_terrain}}</textarea>
+                </div>
+                <div class="form-group font-weight-bolder">
+                    <label for="walk_difficulty">Difficulty</label>
+                    <select class="form-control" id="walk_difficulty" name="walk_difficulty">
+                        <option value="{{walk.walk_difficulty}}" selected>{{walk.walk_difficulty}}</option>
+                        <option>Easy</option>
+                        <option>Moderate</option>
+                        <option>Difficult</option>
+                    </select>
+                </div>
+
+                <!-- Send button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <p class="delete-record-advice"><strong>Inaccurate Information? Delete this entry:</strong></p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal">
+                Delete Walk
+            </button>
+
+            <!-- Modal taken and adapted from Bootstrap -->
+            <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="message_modal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="message_modal">User Message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Are you sure you want to delete this walk?</div>
+                        <div class="modal-footer">
+                            <a href="{{url_for('get_walks')}}" type="button" class="btn btn-secondary">Oops, No!
+                                take me back!</a>
+                            <a href="{{url_for('delete_walk', walk_id=walk._id) }}" type="button" class="btn btn-danger">Yes, Delete This Walk</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

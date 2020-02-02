@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <div class="jumbotron">
+                <h1 class="display-4">About 100 Days of Walking</h1>
+                <p class="lead">In 2019, Irish radio station Newstalk announced the return of 100 Days of Walking, starting on January 1st 2020.  Lunchtime Live presenter Ciara Kelly called on listeners to take up the challenge of walking for just thirty minutes a day for 100 days. This site aims to inspire people to get involved through sharing their walking experiences and routes around the country.</p>
+                <hr class="my-4">
+                <p>It's a simple idea. Just walk as fast or as slow as you like, for at least thirty minutes a day, for 100 days. Everyone can do it - old, young, fit, unfit, all shapes and sizes. Literally just put one foot in front of the other and start to reap the benefits! Please feel free to add, edit, update and review walking routes to help grown and enrich our database</p>
+                <a class="btn btn-success btn-lg" href="{{url_for('get_walks')}}" role="button">Start!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

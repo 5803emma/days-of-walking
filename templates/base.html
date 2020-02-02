@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark home-logo-text">
+            <a class="navbar-brand" href="{{url_for('get_walks')}}">100 Days of Walking <i
+                    class="fas fa-walking"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="{{url_for('about')}}">About</a>
+                    <a class="nav-item nav-link" href="{{url_for('add_new_walk')}}">Add A Walk</a>
+                    <a class="nav-item nav-link" href="{{url_for('walk_review')}}">Review Walk</a>
+                     <a class="nav-item nav-link" href="{{url_for('read_review')}}">Read Reviews</a>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+        <!-- Container for background image -->
+    <div class="container-fluid bg">
+    </div>
+    <!-- Container for injected templates -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 template-col">
+
+    {% block content %} {% endblock %}
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
