@@ -11,13 +11,17 @@ def index():
 def about():
     return render_template("about.html")
     
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+@app.route("/add_walk")
+def add_walk ():
+    return render_template("add_walk.html")
     
-@app.route("/careers")
-def careers():
-    return render_template("careers.html")
+@app.route("/leave_review")
+def leave_review ():
+    return render_template("leave_review.html")
+    
+@app.route("/read_review")
+def read_review():
+    return render_template("read_review.html")
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
