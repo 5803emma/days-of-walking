@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
+
 body {
   background-image: url(../images/bg-image.jpg);
   background-color: #FAFAFA;
@@ -6,12 +8,67 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.navbar-dark {
+  background-color: #152238;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-family: "Tangerine", cursive;
+    font-size: 2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+}
+
 h1, h2 {
   text-align: center;
+  font-family: "Tangerine", cursive;
 }
 
-.container-fluid {
-  padding-bottom: 20px;
+.jumbotron {
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    background-color: #152238;
+    border-radius: .3rem;
 }
 
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    font-family: "Tangerine", cursive;
+}
+
+.row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.media-body {
+  margin-top: 10px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5F9F9F;
+    border-color: #5F9F9F;
+    margin-bottom: 20px;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    height: 3rem;
+    padding-top: 0.5rem;
+    background-color: #152238;
+}
 
