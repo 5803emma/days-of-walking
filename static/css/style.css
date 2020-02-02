@@ -1,31 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
 
-html, body {
-  height: 100%;
-  background-image: url(../images/bg-image.jpg);
-  background-color: #FAFAFA;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  clear: both;
+html,
+body {
+    background-image: url(../images/bg-image.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    clear: both;
 }
 
+
 .container {
-  display: flex;
-  height: 100%;
+    display: flex;
 }
 
 .navbar-dark {
-  background-color: #152238;
+    background-color: #152238;
 }
 
 .navbar-dark .navbar-brand {
     color: #fff;
     font-weight: bold;
-    font-family: "Tangerine", cursive;
+    font-family: "Tangerine", cursive, sans-serif;
     font-size: 2rem;
 }
 
@@ -34,9 +32,10 @@ html, body {
     font-weight: bold;
 }
 
-h1, h2 {
-  text-align: center;
-  font-family: "Tangerine", cursive;
+h1,
+h2 {
+    text-align: center;
+    font-family: "Tangerine", cursive, sans-serif;
 }
 
 .jumbotron {
@@ -52,16 +51,16 @@ h1, h2 {
     font-size: 3.5rem;
     font-weight: 300;
     line-height: 1.2;
-    font-family: "Tangerine", cursive;
+    font-family: "Tangerine", cursive, sans-serif;
 }
 
 .row {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .media-body {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .btn-success {
@@ -82,3 +81,34 @@ h1, h2 {
     background-color: #152238;
 }
 
+
+@media only screen and (max-width: 550px) {
+    .table {
+        font-size: 9px;
+        font-weight: bold;
+    }
+    .btn-sm {
+        font-size: 9px;
+
+    }
+    .table-data {
+        padding-right: 1px;
+        padding-left: 1px;
+    }
+}
+
+.row-review {
+    margin-top: 25px;
+    background-color: rgba(245, 246, 250, 1.0);
+}
+
+.row-welcome {
+    margin-top: 20px;
+    background-color: rgba(245, 246, 250, 1.0);
+}
+
+.text-dark {
+    color: #343a40;
+    padding: 1em;
+    margin: 0.5em;
+}
