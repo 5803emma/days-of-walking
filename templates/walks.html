@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Walks</title>
+</head>
+<body>
+    {% for walk in walks %}
+        {{walk.walk_name}}
+        {{walk.walk_location}}
+        {{walk.walk_length}}
+        {{walk.walk_difficulty}}
+        {{walk.walk_terrain}}
+    {% endfor %}
+</body>
+</html>
