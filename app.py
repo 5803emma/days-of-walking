@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'walking_app'
-app.config["MONGO_URI"] = 'mongodb+srv://root:johnbell@myfirstcluster-20lqh.mongodb.net/walking_app?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
 mongo = PyMongo(app)
 
@@ -77,4 +77,4 @@ def read_review():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
     port=int(os.environ.get("PORT")),
-    debug=True)
+    debug=False)
