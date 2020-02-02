@@ -9,9 +9,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark home-logo-text">
+        <nav class="navbar navbar-expand-md navbar-dark home-logo-text">
             <a class="navbar-brand" href="{{url_for('get_walks')}}"><i
-                    class="fas fa-walking"></i></a> Out And About <i
+                    class="fas fa-walking"></i> Out And About <i
                     class="fas fa-walking"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,14 +29,13 @@
     </header>
        
     <!-- Container for injected templates -->
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 template-col">
+    <div class="container-fluid justify-content-center">
+
 
     {% block content %} {% endblock %}
 
  <!-- Footer -->
-  <footer class="bg-dark fixed-bottom">
+  <footer class="fixed-bottom">
     <div class="container-fluid">
       <p class="m-0 text-center text-white">Code Institute - Milestone 3 Project - Data Centric Development</p>
     </div>
