@@ -15,7 +15,6 @@ Click==7.0
 colorama==0.4.1
 cookiecutter==1.6.0
 dateparser==0.7.2
-Django==2.0.2
 dnspython==1.16.0
 docker==4.1.0
 docutils==0.15.2
@@ -42,7 +41,6 @@ pip-upgrade==0.0.6
 poyo==0.5.0
 pyasn1==0.4.8
 pylint==1.8.1
-pylint-django==0.8.0
 pylint-flask==0.5
 pylint-plugin-utils==0.6
 pymongo==3.10.1
