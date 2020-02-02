@@ -65,14 +65,14 @@ def walk_review():
 
 @app.route("/walk_review", methods=['POST'])
 def insert_review():
-    review = mongo.db.walk_reviews
+    review = mongo.db.reviews
     review.insert_one(request.form.to_dict())
     return redirect(url_for('walk_review'))
 
 
 @app.route("/read_review")
 def read_review():
-    return render_template("read_reviews.html", reviews=mongo.db.walk_reviews.find())
+    return render_template("read_reviews.html", reviews=mongo.db.reviews.find())
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

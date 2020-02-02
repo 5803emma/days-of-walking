@@ -4,12 +4,13 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark home-logo-text">
-            <a class="navbar-brand" href="{{url_for('get_walks')}}">100 Days of Walking <i
+            <a class="navbar-brand" href="{{url_for('get_walks')}}">Out And About <i
                     class="fas fa-walking"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +36,13 @@
 
     {% block content %} {% endblock %}
 
-
+ <!-- Footer -->
+  <footer class="py-5 bg-dark fixed-bottom">
+    <div class="container-fluid">
+      <p class="m-0 text-center text-white">Code Institute - Milestone 3 Project - Data Centric Development</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

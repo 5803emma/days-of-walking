@@ -6,10 +6,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.tbody {
-  background-color: #fafafa;
+.nav-item {
+  font-weight: bold;
+  color: #ffffff;
 }
 
-footer {
-  height: 30px;
-}
+
