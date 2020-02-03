@@ -1,8 +1,8 @@
 # Code Institute - Milestone 3 Project - Data Centric Development
 
-# [Out and About] (https://walking-challenge-ms3.herokuapp.com/) Walks in Ireland
+# Out and About - Walks in Ireland
 
-* This web application allows visitors to create, read, update and delete database records about different walking routes around Ireland. 
+* This [web application](https://walking-challenge-ms3.herokuapp.com/) allows visitors to create, read, update and delete database records about different walking routes around Ireland. 
 * The intention is to grow the database of walking routes through user interaction with the application.  
 * Visitors can also post their own reviews of existing walking routes on the database.
 
