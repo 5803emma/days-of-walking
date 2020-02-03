@@ -82,9 +82,7 @@ Manual tests were carried out to verify that all links and routes were operation
 
 ## Deployment
 
-Deployment and source control was carried out via GitHub and Heroku. The repository location is as follows:[https://github.com/deevdz/milestone-project-3](https://github.com/deevdz/milestone-project-3)
-
-The site is deployed to Heroku and can be found [here]
+Deployment and source control was carried out via GitHub and Heroku. The site is deployed to Heroku and can be found [here](https://walking-challenge-ms3.herokuapp.com/)
 
 Following steps were taken to deploy the website:
 1. Database and Tables were created in an Atlas MongoDB account
